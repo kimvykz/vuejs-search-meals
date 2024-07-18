@@ -1,5 +1,8 @@
 # vuejs-search-meals
-vue js search meals
+npm install vue-router@4
+npm install vuex@4 -S
+npm install -D @tailwindcss/forms
+npm install -S axios
 
 # Vue 3 + Vite
 
