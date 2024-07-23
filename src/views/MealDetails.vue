@@ -1,5 +1,5 @@
 <template>
-  <div class="w-[800px] mx-auto p-8">
+  <div class="max-w-[800px] mx-auto p-8">
     
     <h1 class="text-5xl font-bold mb-5">{{ meal.strMeal }}</h1>
     <img :src="meal.strMealThumb" :alt="meal.strMeal" class="max-w-[100%]">
@@ -42,8 +42,8 @@
       </div>
 
       <div class="mt-4">
-        <YouTubeButton :href="meal.strYoutube">YouTube</YouTubeButton>
-        <a :href="meal.strSource" target="_blank" class="ml-3 px-3 py-2 rounded border-2 border-transparent text-indigo-600 hover:bg-indigo-600 hover:text-white transition-colors">
+        <YouTubeButton :href="meal.strYoutube">YouTube Link</YouTubeButton>
+        <a :href="meal.strSource" target="_blank" class="ml-3 px-3 py-2 rounded border-2 border-transparent text-indigo-600  transition-colors">
           View Original Source
         </a>
       </div>
