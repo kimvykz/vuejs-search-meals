@@ -8,6 +8,8 @@ import DefaultLayout from '../components/DefaultLayout.vue';
 import GuestLayout from '../components/GuestLayout.vue';
 import MealDetails from '../views/MealDetails.vue';
 import Ingredients from '../views/Ingredients.vue';
+import Categories from '../views/Categories.vue';
+import MealsByCategory from '../views/MealsByCategory.vue';
 
 const routes = [
   {
@@ -43,6 +45,16 @@ const routes = [
         path: '/meal/:id',
         name: 'mealDetails',
         component: MealDetails
+      },
+      {
+        path: '/categories',
+        name: 'categories',
+        component: Categories
+      },
+      {
+        path: '/by-category/:category',
+        name: 'byCategory',
+        component: MealsByCategory
       }
     ]
   },

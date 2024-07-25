@@ -13,6 +13,9 @@
         <router-link :to="{name: 'ingredients'}" class="inline-flex items-center px-2 h-full transition-colors text-orange-400 hover:bg-orange-400 hover:text-white">
           Meals By Ingredients
         </router-link>
+        <router-link :to="{name: 'categories'}" class="inline-flex items-center px-2 h-full transition-colors text-orange-400 hover:bg-orange-400 hover:text-white">
+          Meals By Categories
+        </router-link>
       </div>
     </header>
 </template>

@@ -1,8 +1,10 @@
 # vuejs-search-meals
+create vite@latest
 npm install vue-router@4
 npm install vuex@4 -S
 npm install -D @tailwindcss/forms
 npm install -S axios
+npm run dev
 
 # Vue 3 + Vite
 
@@ -12,6 +14,7 @@ Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://
 
 
 docker instructions:
+npm run build
 docker build -t my-nginx-app .
 docker run -d -p 1800:80 --name search-meals-app my-nginx-app
 docker stop search-meals-app
