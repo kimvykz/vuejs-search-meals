@@ -1,5 +1,5 @@
 <template>
-  <div  class="bg-white shadow rounded-xl">
+  <div  class="bg-white shadow rounded-xl hover:scale-105 transition-all">
     <router-link :to="{name: 'mealDetails', params: {id: meal.idMeal}}">
       <img 
         :src="meal.strMealThumb" 
@@ -8,7 +8,9 @@
     </router-link>
     <div class="p-3">
       <h3 class="font-bold">{{ meal.strMeal }}</h3>
-      <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, quis temporibus fugit, iure animi iste rem quod dolore odio sint aliquid sapiente alias ab libero magni quas nobis id laudantium?</p>
+      <p class="mb-4">
+        {{ $filters.truncateWords(meal.strInstructions, 15) }}
+      </p>
       <div class="flex items-center justify-between">
         <YouTubeButton :href="meal.strYoutube" /> 
         
@@ -21,8 +23,6 @@
 
 <script setup>
 import YouTubeButton from './YouTubeButton.vue';
-
-
 
 const { meal } = defineProps({
   meal: {
