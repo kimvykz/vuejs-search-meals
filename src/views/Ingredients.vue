@@ -15,8 +15,14 @@
         v-for="ingredient of computedIngredients"
         :key="ingredient.idIngredient" 
         class="block bg-white rounded p-3 m-1 shadow-md hover:scale-105 transition-all">
-
-        <h3 class="text-2xl font-bold mb-2">{{ ingredient.strIngredient }}</h3>
+        
+        <div class="flex flex-cols-2 items-end">
+          <img 
+          :src="getIngPictLink(ingredient.strIngredient)"
+          :alt="ingredient.strIngredient"
+          >
+          <h3 class="text-2xl font-bold mb-2">{{ ingredient.strIngredient }}</h3>
+        </div>
         <p class="my-1">{{ $filters.truncateWords(ingredient.strDescription, 30) }}</p>
       </a>
     </div>
@@ -46,6 +52,10 @@ function openIngredient(ingredient) {
     name: "byIngredient",
     params: { ingredient: ingredient.strIngredient }
   });
+}
+
+function getIngPictLink(ingredient) {
+  return `https://www.themealdb.com/images/ingredients/${ingredient}-Small.png`;
 }
 
 onMounted(() => {
